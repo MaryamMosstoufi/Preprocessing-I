@@ -5,46 +5,87 @@
   <meta charset="utf-8">
 
   <title>Maryam Mosstoufi | Resume</title>
+  <!-- Fonts -->
+  <script src="https://kit.fontawesome.com/d10a7d406c.js" crossorigin="anonymous"></script>
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/index.css">
 
+  <!-- Scripts -->
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="intro">Maryam Mosstoufi</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#potfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-  <div class="dot-nav"> </div>
-  <section id="intro" class="intro">
-  </section>
-  <section id="skills" class="skills">
-  </section>
-  <section id="about" class="about">
-    <div>
+  <div class="container">
+    <header>
+      <nav id="top-nav">
+        <a class="top-nav-link top-link-active" href="#intro">Maryam Mosstoufi</a>
+        <a class="top-nav-link" href="#about">About</a>
+        <a class="top-nav-link" href="#skills">Skills</a>
+        <a class="top-nav-link" href="#education">Education</a>
+        <a class="top-nav-link" href="#experience">Experience</a>
+        <a class="top-nav-link" href="#portfolio">Portfolio</a>
+        <a class="top-nav-link" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div id="dot-nav" class="dot-nav">
+      <a class="dot-nav-link dot-nav-active" href="#intro"><i class="fas fa-circle"></i></a>
+      <a class="dot-nav-link" href="#about"><i class="fas fa-circle"></i></a>
+      <a class="dot-nav-link" href="#skills"><i class="fas fa-circle"></i></a>
+      <a class="dot-nav-link" href="#education"><i class="fas fa-circle"></i></a>
+      <a class="dot-nav-link" href="#experience"><i class="fas fa-circle"></i></a>
+      <a class="dot-nav-link" href="#portfolio"><i class="fas fa-circle"></i></a>
+      <a class="dot-nav-link" href="#contact"><i class="fas fa-circle"></i></a>
     </div>
-    <div>
-    </div>
-  </section>
-  <section id="education" class="education">
-  </section>
-  <section id="experience" class="experience">
-  </section>
-  <section id="portfolio" class="portfolio">
-  </section>
-  <section id="contact " class="contact">
-  </section>
+    <section id="intro" class="intro">
+      Intro
+    </section>
+    <section id="skills" class="skills">
+      Skills
+    </section>
+    <section id="about" class="about">
+      About
+      <div>
+      </div>
+      <div>
+      </div>
+    </section>
+    <section id="education" class="education">
+      Education
+    </section>
+    <section id="experience" class="experience">
+      Experience
+    </section>
+    <section id="portfolio" class="portfolio">
+      <video autoplay="autoplay" loop="loop" muted="muted" playsinline>
+        <source src="media/portfolio.mp4" type="video/mp4">
+      </video>
+      <h1>Portfolio</h1>
+    </section>
+
+    <footer id="contact" class="contact">
+
+    </footer>
+    <a class="to-top" href="#intro"><i class="fas fa-chevron-square-up"></i></a>
+  </div>
+  <script>
+  // Add active class to dot-nav-link on click
+  var dotNav = document.getElementById("dot-nav");
+  var dotNavLink = dotNav.getElementsByClassName("dot-nav-link");
+  for (var i = 0; i < dotNavLink.length; i++) {
+    dotNavLink[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("dot-nav-active");
+    current[0].className = current[0].className.replace(" dot-nav-active", "");
+    this.className += " dot-nav-active";
+    });
+  }
+  </script>
 
 </body>
+
 </html>

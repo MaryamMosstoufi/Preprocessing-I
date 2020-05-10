@@ -1,0 +1,22 @@
+// Dot Nav
+.dot-nav {
+  background:teal;
+  color: white;
+  position: fixed;
+  top: calc(50% - 91px);
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+
+  a {
+    color: @color-white;
+    margin: 5px 0;
+    opacity: 0.5;
+
+    &:hover,
+    &.dot-nav-active {
+      opacity: 1;
+    }
+  }
+}
