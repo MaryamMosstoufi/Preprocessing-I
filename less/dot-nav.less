@@ -1,6 +1,5 @@
 // Dot Nav
 .dot-nav {
-  background:teal;
   color: white;
   position: fixed;
   top: calc(50% - 91px);
@@ -10,13 +9,51 @@
   z-index: 1000;
 
   a {
-    color: @color-white;
     margin: 5px 0;
-    opacity: 0.5;
+    color: @color-gray-12;
+    .fas {
+      display: none;
+    }
+
+    // &:nth-child(1){
+    //   color: @color-gray-2;
+    // }
+    //
+    // &:nth-child(2){
+    //   color: @color-gray-2;
+    // }
+    //
+    // &:nth-child(3){
+    //   color: @color-gray-4;
+    // }
+    //
+    // &:nth-child(4){
+    //   color: @color-gray-6;
+    // }
+    //
+    // &:nth-child(5){
+    //   color: @color-gray-8;
+    // }
+    //
+    // &:nth-child(6){
+    //   color: @color-gray-10;
+    // }
+    //
+    // &:nth-child(7){
+    //   color: @color-gray-12;
+    // }
 
     &:hover,
+    &:focus,
     &.dot-nav-active {
-      opacity: 1;
+      .fas {
+        display: inline-block;
+      }
+      .far {
+        display: none;
+      }
     }
   }
+
+
 }
