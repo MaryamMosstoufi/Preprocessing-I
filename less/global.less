@@ -18,7 +18,10 @@
 .education-experience,
 .portfolio,
 .contact{
-  min-height: 100vh;
+  @media (min-width: @breakpoint-mobile){
+    min-height: 100vh;
+  }
+
 }
 
 ::selection  {
