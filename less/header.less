@@ -1,0 +1,86 @@
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2rem;
+  font-weight: 600;
+  background: @color-gray-12;
+  z-index: 2000;
+  display: flex;
+  justify-content: space-between;
+
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width:@breakpoint-desktop - 1){
+      display: none;
+    }
+
+    a {
+      color: @color-gray-3;
+      padding: 0 1.6rem;
+      height: 30px;
+      line-height: 30px;
+      &:hover {
+        color:@color-white;
+      }
+
+    }
+
+
+  }
+
+}
+.logo {
+  display: flex;
+  .name {
+    color: @color-white !important;
+    font-size: 2.4rem;
+    padding: 0 1.6rem;
+    height: 30px;
+    line-height: 30px;
+  }
+  .mm-logo {
+    width: 30px;
+    height: 30px;
+    display: flex;
+
+    .mm-bar-one,
+    .mm-bar-two,
+    .mm-bar-three {
+      width: 25%;
+      height: 0;
+      background: @color-white;
+      position: relative;
+      top: 0;
+    }
+
+    .mm-bar-one{
+      margin-right: 12.5%;
+      animation: mm-bar-one .6s .4s forwards;
+    }
+    .mm-bar-two{
+      animation: mm-bar-two .6s .6s forwards;
+      margin-right: 12.5%;
+    }
+    .mm-bar-three{
+      animation: mm-bar-three .6s .8s forwards;
+    }
+
+    @keyframes mm-bar-one{
+    from{height:0}
+    to{height:100%;}
+    }
+    @keyframes mm-bar-two{
+      from{height:0}
+      to{height:100%;}
+    }
+    @keyframes mm-bar-three{
+      from{height:0}
+      to{height:100%;}
+    }
+  }
+}

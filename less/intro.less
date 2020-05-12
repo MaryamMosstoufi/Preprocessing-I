@@ -1,0 +1,42 @@
+.intro {
+  background: @color-gray-1;
+  .center();
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .page-padding();
+
+  img {
+    width: 400px;
+    max-width: 400px;
+    border-radius: 200px;
+    margin: 4rem;
+  }
+  div{
+    text-align: center;
+    h1 {
+      margin: 2rem 1rem;
+      color: @color-gray-7;
+      @media (max-width: @breakpoint-tablet){
+        font-size: 3.6rem;
+      }
+    }
+    h2 {
+      margin: 2rem 1rem;
+      color: @color-gray-9;
+      @media (max-width: @breakpoint-tablet){
+        font-size: 2rem;
+      }
+    }
+    p {
+      padding: 2rem 0;
+      margin: 0 auto;
+      color: @color-gray-9;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      max-width: 750px;
+      text-align: left;
+    }
+
+  }
+
+}

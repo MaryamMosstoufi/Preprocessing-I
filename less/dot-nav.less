@@ -1,0 +1,62 @@
+// Dot Nav
+.dot-nav {
+  color: white;
+  position: fixed;
+  top: calc(50% - 91px);
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  @media (min-width:@breakpoint-desktop){
+    display: none;
+  }
+
+  a {
+    margin: 5px 0;
+    color: @color-gray-12;
+    .fas {
+      display: none;
+    }
+
+    // &:nth-child(1){
+    //   color: @color-gray-2;
+    // }
+    //
+    // &:nth-child(2){
+    //   color: @color-gray-2;
+    // }
+    //
+    // &:nth-child(3){
+    //   color: @color-gray-4;
+    // }
+    //
+    // &:nth-child(4){
+    //   color: @color-gray-6;
+    // }
+    //
+    // &:nth-child(5){
+    //   color: @color-gray-8;
+    // }
+    //
+    // &:nth-child(6){
+    //   color: @color-gray-10;
+    // }
+    //
+    // &:nth-child(7){
+    //   color: @color-gray-12;
+    // }
+
+    &:hover,
+    &:focus,
+    &.dot-nav-active {
+      .fas {
+        display: inline-block;
+      }
+      .far {
+        display: none;
+      }
+    }
+  }
+
+
+}
